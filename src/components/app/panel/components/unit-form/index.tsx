@@ -24,26 +24,25 @@ export default function UnitForm() {
     return null;
   }
   return (
-    <Formik
-      initialValues={{
-        USD: 0
-      }}
-      validationSchema={CurrencySchema}
-      onSubmit={values => {
-        console.log(values);
-        setDollar(values.USD);
-      }}
-      onReset={() => reset()}
-    >
-      {({ errors, touched, resetForm, initialStatus }) => (
-        <Form className='grid grid-cols-2 gap-5'>
+    <div>
+      <h1 className='text-white p-4'>{localization.enterCurrency}</h1>
+      <Formik
+        initialValues={{
+          USD: 0
+        }}
+        validationSchema={CurrencySchema}
+        onSubmit={values => setDollar(values.USD)}
+        onReset={() => reset()}>
+        {() => (
+          <Form className='grid grid-cols-2 gap-5'>
 
-          <Field className='col-span-2' component={FormInput} name='USD' />
+            <Field className='col-span-2' component={FormInput} name='USD' type='number' />
 
-          <Button type='submit'>{localization.submit}</Button>
-          <Button type='reset'>{localization.reset}</Button>
-        </Form>
-      )}
-    </Formik>
+            <Button type='submit'>{localization.submit}</Button>
+            <Button type='reset'>{localization.reset}</Button>
+          </Form>
+        )}
+      </Formik>
+    </div>
   );
 }

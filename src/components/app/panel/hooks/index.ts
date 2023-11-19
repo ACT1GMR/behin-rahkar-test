@@ -9,7 +9,6 @@ import ConversionModel from '@/models/conversion.model';
 
 export const useGetConversion = () => {
   const { dollar } = useCurrencyStore();
-  console.log(dollar);
   return useQuery<ConversionModel>({
     queryKey: [GET_CONVERSION],
     refetchInterval: 2000,

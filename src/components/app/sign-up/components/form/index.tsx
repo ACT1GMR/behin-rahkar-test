@@ -9,10 +9,11 @@ import Button from '@/components/@base/button';
 import { SignupSchema } from '@/components/app/sign-up/components/form/schema';
 import FormInput from '@/components/shared/components/form-input';
 
+import localization from '@/constants/localization';
 import { PANEL } from '@/constants/routes';
 
 
-export default function Formd() {
+export default function UserForm() {
   const router = useRouter();
 
   return (
@@ -35,25 +36,20 @@ export default function Formd() {
         }}
       >
         {({ errors }) => (
-          <Form autoComplete='off' className='flex flex-col gap-5 bg-white p-2.5 rounded'>
+          <Form className='flex flex-col gap-5 bg-white p-2.5 rounded'>
 
             <Field component={FormInput} name='country' error={errors.country} />
 
-
             <Field component={FormInput} name='city' error={errors.city} />
-
 
             <Field component={FormInput} name='username' error={errors.username} />
 
-
             <Field autoComplete='new-email' component={FormInput} name='email' type='email' error={errors.email} />
-
 
             <Field autoComplete='new-password' component={FormInput} name='password' type='password'
                    error={errors.password} />
 
-
-            <Button type='submit'>Submit</Button>
+            <Button type='submit'>{localization.signUp}</Button>
           </Form>
         )}
       </Formik>

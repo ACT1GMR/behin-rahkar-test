@@ -1,11 +1,10 @@
-import { FieldAttributes } from 'formik/dist/Field';
 import React from 'react';
 
 import cn from '@/lib/clsxm';
 
-export default function FormInput({ field, error, className, form, placeholder, ...props }: {
-  field: FieldAttributes<any>
-}) {
+import { Props } from '@/components/shared/components/form-input/type';
+
+export default function FormInput({ field, error, className, form, ...props }: Props) {
   return <>
     {error && <p className='text-red-700 text-xs'>{error}</p>}
     <input

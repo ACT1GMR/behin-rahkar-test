@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'UI challenge Currency Dollar to EUR',
-  description: 'Behin rahkar challenege'
+  description: 'Behin rahkar UI challenege'
 };
 
 export default function RootLayout({

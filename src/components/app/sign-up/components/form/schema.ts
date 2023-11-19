@@ -21,6 +21,6 @@ export const SignupSchema = Yup.object().shape({
     // check minimum characters
     .min(8, 'Password must have at least 8 characters')
     // different error messages for different requirements
-    .matches(/[a-zA-Z0-9!@#$%^&*)(+=._-]/, getCharacterValidationError('special'))
+    .matches(/[!@#$%^&*)(+=._-]/, getCharacterValidationError('special'))
     .matches(/[A-Z]/, getCharacterValidationError('uppercase'))
 });

@@ -1,10 +1,11 @@
 const localization = {
   youDidntRegisteredPleaseSignUp: 'please signup first',
-  enterThePanel: 'login to panel',
+  enterThePanel: 'goto the to panel',
   signUp: 'register',
   panel: 'panel',
   submit: 'submit',
-  reset: 'reset'
+  reset: 'reset',
+  enterCurrency: 'enter currency'
 };
 
 export const pageLevelLocalization = {};
